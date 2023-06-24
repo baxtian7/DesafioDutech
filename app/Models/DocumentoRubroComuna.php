@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class DocumentoRubroComuna extends Model
 {
     use HasFactory;
-    protected $table = 'documento_rubro_comuna';
+    protected $table = 'documento_rubro_comunas';
 
     public function documento()
     {

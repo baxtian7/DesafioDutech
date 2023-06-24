@@ -24,7 +24,9 @@ class DocumentosTableSeeder extends Seeder
             ['name' => 'Permiso de manufactura de alimentos'],
             ['name' => 'Permiso de autorizaciónSanitaria'],
             ['name' => 'Patente de manufactura de proveedores'],
-            ['name' => 'Cédula de identidad']
+            ['name' => 'Cédula de identidad'],
+            ['name' => 'Permiso de autorización Sanitaria']
+
         ];
 
         foreach ($documentos as $documento) {

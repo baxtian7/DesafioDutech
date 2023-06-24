@@ -11,4 +11,9 @@ class Documento extends Model
 
     protected $table = 'documentos';
     protected $fillable = ['name'];
+
+    public function rubros()
+    {
+        return $this->belongsToMany(Rubro::class, 'documento_rubro_comuna', 'documento_id', 'rubro_id');
+    }
 }

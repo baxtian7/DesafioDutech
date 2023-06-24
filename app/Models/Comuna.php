@@ -11,4 +11,9 @@ class Comuna extends Model
 
     protected $table = 'comunas';
     protected $fillable = ['name'];
+    
+    public function rubros()
+    {
+        return $this->belongsToMany(Rubro::class, 'documento_rubro_comuna', 'comuna_id', 'rubro_id');
+    }
 }
