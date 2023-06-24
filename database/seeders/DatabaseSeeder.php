@@ -14,5 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(RubrosTableSeeder::class);
         $this->call(ComunasTableSeeder::class);
+        $this->call(DocumentosTableSeeder::class);
+
     }
 }
