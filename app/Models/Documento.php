@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Rubro;
+use App\Models\Comuna;
 
 class Documento extends Model
 {
@@ -14,6 +16,11 @@ class Documento extends Model
 
     public function rubros()
     {
-        return $this->belongsToMany(Rubro::class, 'documento_rubro_comuna', 'documento_id', 'rubro_id');
+        return $this->belongsToMany(Rubro::class, 'documento_rubro_comunas');
+    }
+
+    public function comunas()
+    {
+        return $this->belongsToMany(Comuna::class, 'documento_rubro_comunas');
     }
 }

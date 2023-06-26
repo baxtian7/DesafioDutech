@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SurveyController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +35,8 @@ require __DIR__.'/auth.php';
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/survey', [SurveyController::class, 'index'])->name('survey.index');
+Route::post('/survey', [SurveyController::class, 'store'])->name('survey.store');
+
+Route::get('/steps', [StepsController::class, 'index'])->name('steps.index');
